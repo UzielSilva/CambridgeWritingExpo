@@ -24,8 +24,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-external="slides/01-introduction.html"> </section>
 			</div>
 		</div>
 
@@ -38,6 +37,7 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				dependencies: [
+				    { src: 'plugin/external/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
