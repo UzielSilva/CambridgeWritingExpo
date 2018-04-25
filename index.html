@@ -7,7 +7,7 @@
 		<title>Cambridge English Preliminary - Writing</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,17 +24,17 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-external="slides/01-introduction.html"> </section>
-				<section data-external="slides/02-eval-part-1.html"> </section>
-				<section data-external="slides/03-exercise-part-1.html"> </section>
-				<section data-external="slides/04-eval-part-2.html"> </section>
-				<section data-external="slides/05-exercise-part-2.html"> </section>
-				<section data-external="slides/06-eval-part-3.html"> </section>
-				<section data-external="slides/07-eval-part-3-letter.html"> </section>
-				<section data-external="slides/08-exercise-part-3-letter.html"> </section>
-				<section data-external="slides/08a-examples-part-3-letter.html"> </section>
-				<section data-external="slides/09-eval-part-3-story.html"> </section>
-				<section data-external="slides/10-exercise-part-3-story.html"> </section>
+				<section data-state="introduction" data-external="slides/01-introduction.html"> </section>
+				<section data-state="eval-part-1" data-external="slides/02-eval-part-1.html"> </section>
+				<section data-state="exercise-part-1" data-external="slides/03-exercise-part-1.html"> </section>
+				<section data-state="eval-part-2" data-external="slides/04-eval-part-2.html"> </section>
+				<section data-state="exercise-part-2" data-external="slides/05-exercise-part-2.html"> </section>
+				<section data-state="eval-part-3" data-external="slides/06-eval-part-3.html"> </section>
+				<section data-state="eval-part-3-letter" data-external="slides/07-eval-part-3-letter.html"> </section>
+				<section data-state="exercise-part-3-letter" data-external="slides/08-exercise-part-3-letter.html"> </section>
+				<section data-state="examples-part-3-letter" data-external="slides/08a-examples-part-3-letter.html"> </section>
+				<section data-state="eval-part-3-story" data-external="slides/09-eval-part-3-story.html"> </section>
+				<section data-state="exercise-part-3-story" data-external="slides/10-exercise-part-3-story.html"> </section>
 			</div>
 		</div>
 
@@ -46,11 +46,18 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
 				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 				    { src: 'plugin/external/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/search/search.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
