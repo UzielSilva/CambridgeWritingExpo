@@ -52,5 +52,18 @@
 				]
 			});
 		</script>
+		<script type="text/javascript">
+		    function hideAllMarks(answerNumber){
+		        var criteria = ['content', 'communicative', 'organization', 'language'];
+
+		        criteria.forEach(function(mark){
+		            document.getElementById(mark+'-mark-'+answerNumber).style.display = 'none';
+		        });
+		    }
+
+		    function showMark(mark, answerNumber){
+		        document.getElementById(mark+'-mark-'+answerNumber).style.display = 'block';
+		    }
+		</script>
 	</body>
 </html>
